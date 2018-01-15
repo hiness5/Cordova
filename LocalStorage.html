@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Snowmobiling Application</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="lib/bootstrap/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="lib/jquery/jquery-ui.min.css" rel="stylesheet" />
+    <link href="lib/jquery/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="lib/jquery/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="content.html">
+                        Snow Tool
+                    </a>
+                </li>
+                <li>
+                    <a href="weather.html">Weather</a>
+                </li>
+                <li>
+                    <a href="compass.html">Compass</a>
+                </li>
+                <li>
+                    <a href="flashlight.html">Flashlight</a>
+                </li>
+                <li>
+                    <a href="camera.html">Camera</a>
+                </li>
+                <li>
+                    <a href="accelerometer.html">Accelerometer</a>
+                </li>
+                <li>
+                    <a href="map.html">Map</a>
+                </li>
+                <li>
+                    <a href="LocalStorage.html">Notes</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="divContent">
+            <div class="hiddenDiv container-fluid text-center contentDivs" id="div2MenuContainer">
+                <h3>Snowmobile Information</h3>
+                <form onsubmit="return ValidateForm();">
+                    <label for="tbAddMake">Make: </label>
+                    <input name="tbAddMake" id="tbAddMake" type="text" required />
+                    <br />
+                    <label for="tbAddModel">Model:</label>
+                    <input name="tbAddModel" id="tbAddModel" type="text" required />
+                    <br />
+                    <label for="tbAddYear">Year: </label>
+                    <input name="tbAddYear" id="tbAddYear" type="number" required />
+                    <br />
+                    <label for="tbAddDate">Date of Registration:</label>
+                    <input name="tbAddDate" id="tbAddDate" type="date" required />
+                    <br />
+                    <label for="tbAddOil">Date of Last Oil Change:</label>
+                    <input name="tbAddOil" id="tbAddOil" type="date" required />
+                    <br />
+
+                    <input type="button" id="BtnAddInfo" value="add" />&nbsp;
+                    <input type="reset" id="BtnClearScore" value="clear" />&nbsp;
+                    <button type="button" id="btnView" class="btn btn-default">View</button>
+                </form>
+            </div>
+        </div>
+        <div id="div3MenuContainer" class="contentDivs hidden" onclick="return ViewInfo();"> 
+            <h3>View Maintenance Information</h3>
+            <p>Make: <span id="SpanMake" class="results"></span></p>
+            <p>Model: <span id="SpanModel" class="results"></span></p>
+            <p>Year: <span id="SpanYear" class="results"></span></p>
+            <p>Date of Registration: <span id="SpanDate" class="results"></span></p>
+            <p>Date of Oil Change: <span id="SpanOil" class="results"></span></p>
+            <input id="btnReset" type="reset" value="Reset" /> 
+            </div>
+        <div id="div4MenuContainer" class="contentDivs hidden" onclick="return EditInformation();">
+                <h2 class="center">Edit Maintenance Information:</h2>
+                    <label class="control-label" for="tbEditMake">Make: </label>
+                    <input type="text" class="form-control" id="tbEditMake" required>
+                    <label class="control-label" for="tbEditModel">Model: </label>
+                    <input type="text" class="form-control" id="tbEditModel" required>
+                    <label class="control-label" for="tbEditYear">Year: </label>
+                    <input type="number" class="form-control" id="tbEditYear" required>
+                    <label class="control-label" for="tbEditDate">Date of Registration: </label>
+                    <input type="date" class="form-control" id="tbEditDate" required>
+                    <label class="control-label" for="tbEditOil">Date of Oil Change: </label>
+                    <input type="date" class="form-control" id="tbEditOil" required>
+                        <button type="submit" class="btn btn-default">Submit: </button>
+                        <button type="button" id="btnCancelEdit" class="btn btn-default">Cancel</button>
+                        <button type="button" id="btnDelete" class="btn btn-default">Delete</button>
+                    <button type="button" id="btnView" class="btn btn-default">View</button>
+                    </div>
+                    </div>
+     
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Main Menu</a>
+                </div>
+            </div>
+       
+            <!-- /#page-content-wrapper -->
+            <!-- /#wrapper -->
+            <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+            <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+
+            <script src="lib/bootstrap/vendor/jquery/jquery.min.js"></script>
+            <script src="lib/jquery/jquery-ui.min.js"></script>
+            <script src="lib/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+            <script src="scripts/localStorage.js"></script>
+            <!-- Menu Toggle Script -->
+            <script>
+                $("#menu-toggle").click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+            </script>
+</body>
+</html>

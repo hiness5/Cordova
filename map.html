@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Snowmobiling Application</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="lib/bootstrap/css/simple-sidebar.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="content.html">
+                        Snow Tool
+                    </a>
+                </li>
+                <li>
+                    <a href="weather.html">Weather</a>
+                </li>
+                <li>
+                    <a href="compass.html">Compass</a>
+                </li>
+                <li>
+                    <a href="flashlight.html">Flashlight</a>
+                </li>
+                <li>
+                    <a href="camera.html">Camera</a>
+                </li>
+                <li>
+                    <a href="accelerometer.html">Accelerometer</a>
+                </li>
+                <li>
+                    <a href="map.html">Map</a>
+                </li>
+                <li>
+                    <a href="LocalStorage.html">Notes</a>
+                </li>
+            </ul>
+        </div>
+        <div id="divMenu">
+            <input id="btnMap" type="button" value="Map" />
+            <input id="btnForecast" type="button" value="Forecast" />
+        </div>
+        <div class="divContent">
+            <h2 class="center">Map</h2>
+            <div id="divMap"></div>
+            <div id="divMapForm">
+                <h3>Enter an address to search for:</h3>
+                <input type="text" id="tbAddress" />
+                <p class="center">
+                    <input type="button" value="find" id="btnFind" />
+                    <input type="button" value="clear" id="btnClear" />
+                </p>
+            </div>
+        </div>
+        div id="page-content-wrapper">
+        <div class="container-fluid">
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Main Menu</a>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script src="lib/bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Camera</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="lib/bootstrap/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="content.html">
+                        Snow Tool
+                    </a>
+                </li>
+                <li>
+                    <a href="weather.html">Weather</a>
+                </li>
+                <li>
+                    <a href="compass.html">Compass</a>
+                </li>
+                <li>
+                    <a href="flashlight.html">Flashlight</a>
+                </li>
+                <li>
+                    <a href="camera.html">Camera</a>
+                </li>
+                <li>
+                    <a href="accelerometer.html">Accelerometer</a>
+                </li>
+                <li>
+                    <a href="map.html">Map</a>
+                </li>
+                <li>
+                    <a href="LocalStorage.html">Notes</a>
+                </li>
+            </ul>
+        </div>
+        <div id="divContent">
+            <h1>Camera</h1>
+            <div id="divButtons">
+                <input type="button" id="btnPicture" value="Take Picture" onclick="cameraTakePicture();" />
+                <br /> <br />
+                <input type="button" id="btnGallery" value="Get Picture" onclick="cameraGetPicture();" />
+            </div>
+            <img id="imgPicture" />
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Main Menu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script src="lib/jquery-3.2.1.min.js"></script>
+        <script src="lib/bootstrap/vendor/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/camera.js"></script>
+    <script>
+                $("#menu-toggle").click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+    </script>
+</body>
+</html>
